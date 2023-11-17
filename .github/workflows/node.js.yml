@@ -19,6 +19,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
+    - name: Install nyc globally
+      run: npm install -g nyc
+
+    - name: Run tests in "tests" folder
+      run: npx nyc npm test
+
     - name: Remove existing node_modules folder from cloned project
       run: rm -rf /home/runner/work/resource-mgmt/resource-mgmt/node_modules/*
 
