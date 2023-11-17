@@ -16,6 +16,8 @@ app.get('/view-resources', viewResources);
 app.post('/add-resource', addResource);
 
 
+
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/" + startPage);
 })
